@@ -5,10 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ordenamiento"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListBox x:Name="lstNumeros" HorizontalAlignment="Left" Height="339" Margin="40,39,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Ordenar" HorizontalAlignment="Left" Margin="258,54,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        Title="MainWindow" Height="330" Width="465.6">
+    <Grid Margin="0,0,3.8,0">
+
+        <ListView x:Name="lstNumeros" HorizontalAlignment="Left" Height="261" Margin="45,10,0,0" VerticalAlignment="Top" Width="240">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Nombre}" Header="Nombre"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Promedio}" Header="Promedio"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Faltas}" Header="Faltas"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="Shell Faltas" HorizontalAlignment="Left" Margin="309,12,0,0" VerticalAlignment="Top" Width="105" Height="44" Click="Button_Click"/>
+        <Button x:Name="btnBubble" Content="Bubble Faltas" HorizontalAlignment="Left" Margin="309,108,0,0" VerticalAlignment="Top" Width="105" Height="46" Click="BtnBubble_Click"/>
+        <Button x:Name="btnordenarnombres" Content="Shell Promedio" HorizontalAlignment="Left" Margin="309,61,0,0" VerticalAlignment="Top" Width="105" Height="42" Click="Btnordenarnombres_Click"/>
+        <Button x:Name="btnbubblepromedio" Content="Bubble Promedio" HorizontalAlignment="Left" Margin="309,159,0,0" VerticalAlignment="Top" Width="105" Height="53" Click="Btnbubblepromedio_Click"/>
+        <Button x:Name="btnshell_mas" Content="Shell" HorizontalAlignment="Left" Margin="309,217,0,0" VerticalAlignment="Top" Width="105" Height="54" Click="Btnshell_mas_Click"/>
 
     </Grid>
 </Window>
